@@ -1,0 +1,1624 @@
+@use "reset.css";
+@import "mob-burger.css";
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+$main-color: #0C0D2E;
+$secondary-color: #010225;
+$main-font: "League Spartan", sans-serif;
+$main-font-color: #fff;
+$hover-font-color: #189ce8;
+$switcher-color:#212250;
+@mixin max-screen($res) {
+  @media screen and (max-width: $res)
+  {
+    @content;
+  }
+}
+@mixin border($px, $color, $radius){
+  border: solid $px $color;
+  border-radius: $radius;
+}
+@mixin flex($flex,$just:inherit,$align:inherit){
+  display: $flex;
+  justify-content: $just;
+  align-items: $align;
+}
+@mixin main-font-styles($weight, $font-size, $line-height, $color:$main-font-color) {
+  font-weight: $weight;
+  font-family: $main-font;
+  font-size: $font-size;
+  color: $color;
+  line-height: $line-height;
+}
+@mixin pseudo($flex,$w, $h){
+  display: $flex;
+  width: $w;
+  height: $h;
+  content: "";
+  background-repeat: no-repeat;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1268px;
+  margin: auto;
+}
+header {
+  background: $main-color;
+  opacity: 90%;
+  position: relative;
+  z-index: 13;
+  @include max-screen(835px){
+    opacity: 1;
+  }
+}
+header .container{
+  @include flex(flex,space-between,center);
+  background: $main-color;
+  opacity: 90%;
+  padding: 14px 43px;
+  position: relative;
+  z-index: 12;
+  @include max-screen(993px){
+    padding: 20px 43px;
+  }
+  @include max-screen(835px){
+    opacity: 1;
+    padding: 15px 15px;
+  }
+  @include max-screen(391px){
+    padding: 15px 15px 0 0;
+  }
+}
+.main-logo{
+  @include max-screen(431px) {
+    scale: 0.8;
+  }
+  @include max-screen(394px){
+    scale: 0.7;
+  }
+}
+.header-list{
+  @include flex(flex,inherit,inherit);
+  gap: 24px;
+  @include max-screen(835px){
+    flex-direction: column;
+    .header-list li:nth-of-type(5){
+      margin-bottom: 20px;
+    }
+  }
+  @include max-screen(415px){
+    gap: 5px;
+  }
+}
+.header-list-elements:hover .header-list-links{
+  color: $hover-font-color;
+}
+.header-list-links{
+  @include main-font-styles(400,18px,111%);
+  text-decoration: none;
+  transition: .4s;
+  @include max-screen(321px){
+    @include main-font-styles(400,12px,111%);
+  }
+}
+.header-button{
+  @include border(2px, $main-font-color, 100px);
+  padding: 16px 32px 16px;
+  margin-left: 4px;
+  transition: 0.5s;
+  @include max-screen(835px){
+    @include border(1px, $main-font-color, 100px);
+  }
+}
+.header-list-button:hover .header-button{
+  @include border(2px, $hover-font-color, 100px);
+  color: $hover-font-color;
+  background-color: rgba(255, 255, 255, 1);
+  @include max-screen(835px){
+    @include border(1px, $hover-font-color, 100px);
+  }
+}
+.nav-but-wrap{
+  display: none;
+  @include max-screen(835px){
+    @include flex(flex);
+    margin: 0;
+    padding: 0;
+    .header-list-button{
+      display: none;
+    }
+  }
+}
+.main-banner{
+  background-color: $secondary-color;
+}
+.main-banner .container{
+  @include flex(flex,space-between,inherit);
+  background-color: $secondary-color;
+  position: relative;
+  padding: 110px 0 164px 86px;
+  @include max-screen(1025px){
+    padding: 110px 0 164px 40px;
+  }
+  @include max-screen(885px){
+    padding: 60px 0 40px 40px;
+  }
+  @include max-screen(431px){
+  padding: 60px 15px 40px;
+  }
+  @include max-screen(415px){
+    padding: 40px 15px;
+  }
+}
+.main-banner-text{
+  width: 617px;
+  @include max-screen(1025px){
+    width: 485px;
+  }
+  @include max-screen(376px){
+    padding: 0 20px;
+  }
+  img {
+    @include max-screen(321px){
+      width: 120px;
+      height: auto;
+    }
+  }
+}
+.main-banner-text a{
+  @include flex(inline-block);
+  position: relative;
+  z-index: 15;
+  @include max-screen(431px){
+    margin-left: 25px;
+  }
+  @include max-screen(376px){
+    margin-left: 0;
+  }
+  @include max-screen(361px){
+    width: 140px;
+  }
+  @include max-screen(321px){
+    width: 120px;
+  }
+}
+.main-banner-title{
+  @include main-font-styles(400,64px,119%,$main-font-color);
+  margin-bottom: 10px;
+  width: 557px;
+  @include max-screen(993px){
+    @include main-font-styles(400,62px,119%,$main-font-color);
+  }
+  @include max-screen(885px){
+    @include main-font-styles(400,55px,119%,$main-font-color);
+    width: 450px;
+  }
+  @include max-screen(835px){
+    width: 400px;
+  }
+  @include max-screen(821px){
+    @include main-font-styles(400,50px,119%,$main-font-color);
+  }
+  @include max-screen(801px){
+    @include main-font-styles(400,45px,119%,$main-font-color);
+    margin-bottom: 45px;
+  }
+  @include max-screen(769px){
+    @include main-font-styles(400,43px,119%,$main-font-color);
+  }
+  @include max-screen(431px){
+    @include main-font-styles(400, 29px, 119%, $main-font-color);
+    position: relative;
+    z-index: 20;
+    text-align: center;
+  }
+  @include max-screen(415px){
+    width: 300px;
+    margin: 0 auto 45px;
+  }
+  @include max-screen(361px){
+    width: 260px;
+  }
+  @include max-screen(321px){
+    width: 220px;
+  }
+}
+.main-banner-description{
+  @include main-font-styles(400,12px,250%,$main-font-color);
+    margin-bottom: 14px;
+  @include max-screen(885px){
+    width: 360px;
+  }
+  @include max-screen(801px){
+    margin-bottom: 45px;
+  }
+  @include max-screen(431px){
+    position: relative;
+    z-index: 15;
+    text-align: center;
+    width: 275px;
+    margin: 45px auto;
+  }
+  @include max-screen(361px){
+    width: 250px;
+  }
+  @include max-screen(321px){
+    width: 220px;
+  }
+}
+.main-banner-img{
+  position: absolute;
+  top: -72px;
+  right: -85px;
+  z-index: 12;
+  @include max-screen(1441px){
+    width: 47%;
+    height: auto;
+    right: 1%;
+  }
+  @include max-screen(1390px){
+    width: 50%;
+    height: auto;
+    right: -10px;
+  }
+  @include max-screen(1025px){
+    width: 49.8%;
+    height: auto;
+    right: 0;
+  }
+  @include max-screen(993px){
+    width: 50.5%;
+    height: auto;
+    right: 0;
+  }
+  @include max-screen(885px){
+    top: 0;
+    width: 37%;
+  }
+  @include max-screen(835px){
+    top: 0;
+    width: 44.8%;
+  }
+  @include max-screen(821px){
+    width: 43.5%;
+  }
+  @include max-screen(801px){
+    width: 43.9%;
+  }
+  @include max-screen(769px){
+    width: 44.9%;
+  }
+  @include max-screen(431px){
+    top: 104px;
+    opacity: 42%;
+    width: 48%;
+  }
+  @include max-screen(415px){
+    width: 53%;
+    top: 20px;
+  }
+  @include max-screen(391px){
+    top: 35px;
+  }
+  @include max-screen(376px){
+    width: 54.5%;
+  }
+}
+.app-description-section{
+  background-color: $main-color;
+  position: relative;
+  z-index: 11;
+}
+.app-description-section .container{
+  background-color: $main-color;
+  @include flex(flex,inherit,center);
+  flex-direction: column;
+  padding: 180px 0 160px;
+  position: relative;
+  z-index: 10;
+  @include max-screen(1025px){
+    padding: 180px 15px 160px ;
+  }
+  @include max-screen(885px){
+    padding: 105px 15px;
+  }
+  @include max-screen(415px){
+    padding: 85px 15px;
+  }
+  @include max-screen(321px){
+    padding: 65px 15px;
+  }
+}
+.app-description-section-title{
+  @include main-font-styles(400,40px,135%,$main-font-color);
+  text-align: center;
+  margin-bottom: 20px;
+  @include max-screen(821px){
+    @include main-font-styles(400,38px,135%,$main-font-color);
+  }
+  @include max-screen(769px){
+    margin-bottom: 45px;
+  }
+  @include max-screen(431px) {
+    max-width: 300px;
+  }
+  @include max-screen(391px){
+    @include main-font-styles(400,35px,135%,$main-font-color);
+  }
+  @include max-screen(376px){
+    max-width: 270px;
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,30px,135%,$main-font-color);
+    width: 230px;
+  }
+}
+.app-description-section-text{
+  @include main-font-styles(400,18px,167%,$main-font-color);
+  text-align: center;
+  max-width: 699px;
+  margin-bottom: 85px;
+  @include max-screen(821px){
+    @include main-font-styles(400,16px,135%,$main-font-color);
+    max-width: 560px;
+  }
+  @include max-screen(769px){
+    max-width: 500px;
+  }
+  @include max-screen(431px){
+    max-width: 300px;
+    margin-bottom: 50px;
+    @include main-font-styles(400,16px,200%,$main-font-color);
+  }
+  @include max-screen(391px){
+    @include main-font-styles(400,14px,200%,$main-font-color);
+  }
+  @include max-screen(376px){
+    max-width: 290px;
+  }
+  @include max-screen(361px){
+    width: 260px;
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,12px,200%,$main-font-color);
+  }
+}
+.benefits{
+  @include flex(flex,space-around,center);
+  @include max-screen(431px){
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+}
+.benefits article{
+  max-width: 350px;
+  text-align: center;
+  padding: 0 44px;
+}
+.benefits article img{
+  background-color: $secondary-color;
+  border-radius: 10px;
+  transition: 1s;
+  margin-bottom: 12px;
+  animation: rotate 4s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    rotate: 0;
+  }
+  25%{
+    rotate: 90deg;
+  }
+  50%{
+    rotate: 180deg;
+  }
+  75%{
+    rotate: 270deg;
+  }
+  100%{
+    rotate: 360deg;
+  }
+}
+.benefits article img:hover{
+  rotate: 360deg;
+}
+.benefits-title{
+  @include main-font-styles(400,20px,100%,$main-font-color);
+  margin-bottom: 10px;
+}
+.benefits-description{
+  @include main-font-styles(400,11px,218%,$main-font-color);
+  margin-bottom: 15px;
+}
+.learn-more-link{
+  @include main-font-styles(400,18px,111%,$main-font-color);
+  text-decoration: none;
+}
+
+.learn-more-link:hover {
+  color: $hover-font-color;
+}
+.learn-more-link::after {
+  @include pseudo(inline-flex,20px,16px);
+  background-image: url('../img/learn-more-img_2.svg');
+  margin-left: 10px;
+  transform: rotate(180deg);
+}
+
+.learn-more-link:hover::after {
+  @include pseudo(inline-flex,20px,16px);
+  background-image: url('../img/learn-more-img.svg');
+  margin-left: 10px;
+  transform: rotate(0deg);
+}
+.features-section{
+  background: $main-color;
+}
+.features-section .container{
+  background: $main-color;
+  overflow: hidden;
+  @include flex(flex,center,center);
+  flex-direction: column;
+  padding: 188px 0 160px;
+  position: relative;
+  @include max-screen(1025px){
+    padding: 188px 15px 160px;
+  }
+  @include max-screen(821px){
+    padding: 100px 30px 100px;
+  }
+  @include max-screen(361px){
+    padding: 75px 40px 50px;
+  }
+}
+.feature-title{
+  @include main-font-styles(400,40px,135%,$main-font-color);
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-bottom: 10px;
+  max-width: 666px;
+  @include max-screen(821px){
+    @include main-font-styles(400,38px,135%,$main-font-color);
+    max-width: 600px;
+  }
+  @include max-screen(431px){
+    max-width: 300px;
+  }
+  @include max-screen(391px){
+    @include main-font-styles(400,35px,135%,$main-font-color);
+    margin-bottom: 30px;
+  }
+  @include max-screen(376px){
+    @include main-font-styles(400,33px,135%,$main-font-color);
+  }
+  @include max-screen(361px){
+    width: 280px;
+    @include main-font-styles(400,31px,135%,$main-font-color);
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,30px,135%,$main-font-color);
+  }
+}
+.feature-description{
+  @include main-font-styles(400,12px,250%,$main-font-color);
+  text-align: center;
+  max-width: 699px;
+  margin-bottom: 44px;
+  @include max-screen(821px){
+    max-width: 500px;
+  }
+  @include max-screen(801px){
+    @include main-font-styles(400,13px,250%,$main-font-color);
+  }
+  @include max-screen(431px){
+    max-width: 300px;
+    @include main-font-styles(400,14px,250%,$main-font-color);
+  }
+  @include max-screen(376px){
+    max-width: 280px;
+  }
+  @include max-screen(361px){
+    max-width: 260px;
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,12px,250%,$main-font-color);
+  }
+}
+.background-img-for-features{
+  position: absolute;
+  top: -400px;
+  left: -85px;
+  z-index: 9;
+  @include max-screen(1025px){
+    left: -20%;
+  }
+  @include max-screen(993px) {
+    width: 430px;
+    height: auto;
+    top: -380px;
+  }
+  @include max-screen(835px) {
+    width: 400px;
+    top: -330px;
+    left: -20%;
+  }
+  @include max-screen(821px){
+    width: 365px;
+    left: -23%;
+  }
+  @include max-screen(431px){
+    width: 250px;
+    left: -42px;
+    opacity: 70%;
+    top: -135px;
+  }
+  @include max-screen(415px){
+    top: -170px;
+  }
+  @include max-screen(361px){
+    width: 220px;
+    left: -80px;
+    top: -160px;
+  }
+}
+.feature-list{
+  display: flex;
+  gap: 40px;
+  @include max-screen(835px){
+    gap: 10px;
+  }
+  @include max-screen(431px){
+    position: relative;
+    z-index: 3;
+    flex-direction: row-reverse;
+    gap: 60px;
+  }
+  @include max-screen(415px){
+    gap: 50px;
+  }
+  @include max-screen(376px){
+    gap: 35px;
+  }
+  @include max-screen(321px){
+    gap: 80px;
+  }
+}
+.feature-block {
+  padding-top: 80px;
+}
+.feature-list-title{
+  @include main-font-styles(400,20px,100%,$main-font-color);
+  text-align: right;
+  position: relative;
+  margin-bottom: 10px;
+  @include max-screen(855px){
+    @include main-font-styles(400,18px,100%,$main-font-color);
+    margin-bottom: 20px;
+  }
+  @include max-screen(361px){
+    max-width: 275px;
+    text-align: right;
+  }
+}
+.feature-list-title:before{
+  animation: pop 5s infinite linear;
+  background-image: url("../img/feature-list-img.svg");
+  @include pseudo(block,20px,20px);
+  position: absolute;
+  right: 0;
+  top: -30px;
+  @include max-screen(821px){
+    top: -40px;
+  }
+}
+@keyframes pop {
+  50% {
+    rotate: 360deg;
+  }
+}
+.feature-list-description{
+  @include main-font-styles(400,16px,150%,$main-font-color);
+  text-align: right;
+  margin-bottom: 130px;
+  max-width: 339px;
+  @include max-screen(885px){
+    @include main-font-styles(400,15px,150%,$main-font-color);
+  }
+  @include max-screen(821px){
+    max-width: 300px;
+    margin-bottom: 85px;
+  }
+  @include max-screen(769px){
+    @include main-font-styles(400,14px,150%,$main-font-color);
+  }
+  @include max-screen(431px){
+    max-width: 250px;
+    margin-bottom: 80px;
+  }
+  @include max-screen(361px){
+    max-width: 275px;
+    text-align: right;
+    @include main-font-styles(400,13px,150%,$main-font-color);
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,12px,150%,$main-font-color);
+  }
+}
+.feature-block p:last-of-type{
+  margin-bottom: 0;
+}
+.feature-list-title-right{
+  @include main-font-styles(400,20px,100%,$main-font-color);
+  position: relative;
+  margin-bottom: 10px;
+  @include max-screen(885px){
+    @include main-font-styles(400,18px,100%,$main-font-color);
+    margin-bottom: 20px;
+  }
+}
+.feature-list-title-right:before{
+  animation: pop 5s infinite linear;
+  background-image: url("../img/feature-list-img.svg");
+  @include pseudo(block,20px,20px);
+  position: absolute;
+  left: 0;
+  top: -30px;
+  @include max-screen(821px){
+    top: -40px;
+  }
+}
+.feature-list-description-right{
+  @include main-font-styles(400,16px,150%,$main-font-color);
+  margin-bottom: 130px;
+  max-width: 339px;
+  @include max-screen(885px){
+    @include main-font-styles(400,15px,150%,$main-font-color);
+  }
+  @include max-screen(821px){
+    max-width: 300px;
+    margin-bottom: 85px;
+  }
+  @include max-screen(769px){
+    @include main-font-styles(400,14px,150%,$main-font-color);
+  }
+  @include max-screen(431px){
+    max-width: 250px;
+    margin-bottom: 80px;
+  }
+  @include max-screen(361px){
+    max-width: 275px;
+    text-align: left;
+    @include main-font-styles(400,13px,150%,$main-font-color);
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,12px,150%,$main-font-color);
+  }
+}
+.feature-main-img{
+  position: relative;
+  top: -19px;
+  @include max-screen(993px) {
+  top: 25px;
+  }
+  @include max-screen(885px){
+    scale: 0.95;
+  }
+  @include max-screen(821px){
+    scale: 0.93;
+  }
+  @include max-screen(769px){
+    scale: 0.8;
+  }
+  @include max-screen(431px){
+    position: absolute;
+    z-index: -1;
+    opacity: 15%;
+    left: 20px;
+    scale: 0.9;
+  }
+  @include max-screen(391px){
+    left: 0;
+  }
+  @include max-screen(376px){
+    left: -30px;
+    opacity: 20%;
+  }
+
+}
+.mobile-friendly{
+  background-color: $secondary-color;
+}
+.mobile-friendly .container{
+  background-color: $secondary-color;
+  @include flex(flex);
+  padding: 110px 0 32px 86px;
+  @include max-screen(1025px){
+    padding: 110px 2px 32px 30px;
+  }
+  @include max-screen(885px){
+    @include flex(flex, center);
+    padding: 110px 2px 50px 15px;
+  }
+  @include max-screen(431px){
+    padding: 75px 30px 32px;
+    position: relative;
+  }
+  @include max-screen(376px){
+    padding: 55px 30px 50px;
+  }
+}
+.mobile-friendly-block{
+  margin: 70px 17px 0 0;
+  position: relative;
+  @include max-screen(1025px){
+      margin-top: 15px;
+      position: relative;
+      width: 400px;
+      margin-right: 40px;
+  }
+  @include max-screen(769px){
+    width: 370px;
+  }
+  @include max-screen(431px){
+    z-index: 15;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+.mobile-friendly-block-text{
+  @include main-font-styles(400,18px,111%,$hover-font-color);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  @include max-screen(431px){
+    @include main-font-styles(400,16px,111%,$hover-font-color);
+    max-width: 350px;
+  }
+}
+.mobile-friendly-title{
+  @include main-font-styles(400,40px,135%,$main-font-color);
+  margin-bottom: 10px;
+  max-width: 456px;
+  @include max-screen(431px){
+    @include main-font-styles(400,25px,135%,$main-font-color);
+    max-width: 350px;
+  }
+}
+
+.mobile-friendly-description{
+  @include main-font-styles(400,12px,250%,$main-font-color);
+  margin-bottom: 35px;
+  max-width: 617px;
+  @include max-screen(431px){
+    margin: 0 auto 35px;
+    max-width: 300px;
+  }
+}
+.mobile-friendly-benefits{
+  display: flex;
+  gap: 55px;
+  @include max-screen(361px){
+    gap: 40px;
+  }
+}
+.mobile-friendly-logo{
+  margin-bottom: 20px;
+  animation: rotate 4s infinite linear;
+}
+.mobile-friendly-benefits-title{
+  @include main-font-styles(400,20px,100%,$main-font-color);
+  margin-bottom: 10px;
+}
+.mobile-friendly-benefits-desription{
+  @include main-font-styles(400,11px,218%,$main-font-color);
+  margin-bottom: 75px;
+  max-width: 269px;
+}
+.mobile-friendly-link{
+  @include main-font-styles(400,16px,100%,$main-font-color);
+  @include border(2px, $hover-font-color, 100px);
+  text-decoration: none;
+  padding: 16px 32px;
+  background-color: $hover-font-color;
+  position: relative;
+  z-index: 2;
+  transition: 1s;
+}
+.mobile-friendly-link:hover{
+  background-color: white;
+  color: $hover-font-color;
+}
+.mobile-friendly-dots{
+  position: absolute;
+  bottom: 107px;
+  left: 147px;
+  z-index: 1;
+  @include max-screen(1025px){
+    bottom: -24px;
+  }
+  @include max-screen(394px){
+    left: 132px;
+  }
+  @include max-screen(361px){
+    left: 118px;
+  }
+}
+.mobile-friendly-img_2 {
+  position: relative;
+  right: -73px;
+  @include max-screen(1281px){
+    right: 0;
+  }
+  @include max-screen(1025px){
+    width: 260px;
+    height: auto;
+  }
+  @include max-screen(993px){
+    position: absolute;
+    z-index: 10;
+    right: 45px;
+    scale: 0.95;
+  }
+  @include max-screen(885px){
+    scale: 0.9;
+    right: 0;
+  }
+  @include max-screen(769px){
+    position: relative;
+    right: 0;
+  }
+  @include max-screen(431px){
+    position: absolute;
+    opacity: 15%;
+  }
+  @include max-screen(394px){
+    right: 65px;
+    scale: 1;
+    top: 30px;
+  }
+  @include max-screen(376px){
+    right: 57px;
+    opacity: 15%;
+  }
+  @include max-screen(361px){
+    right: 40px;
+  }
+}
+.mobile-friendly-img_1{
+  position: relative;
+  right: -80px;
+  @include max-screen(1281px){
+    right: -10px;
+  }
+  @include max-screen(1025px){
+    width: 260px;
+    height: auto;
+  }
+  @include max-screen(993px){
+    position: relative;
+    z-index: 9;
+    right: -65px;
+    scale: 0.95;
+  }
+  @include max-screen(885px){
+    scale: 0.9;
+    right: 25px;
+  }
+  @include max-screen(769px){
+    @include flex(none);
+  }
+}
+.partners {
+  background-color: $secondary-color;
+}
+.partners .container{
+  padding: 160px 87px;
+  background-color: $secondary-color;
+  @include max-screen(1025px) {
+    padding: 120px 87px;
+  }
+  @include max-screen(431px) {
+    padding: 100px 30px;
+  }
+  @include max-screen(415px){
+    padding: 100px 30px 50px;
+  }
+  @include max-screen(376px){
+    padding: 75px 30px 50px;
+  }
+}
+.partners-text{
+  @include main-font-styles(400,18px,111%,$hover-font-color);
+  text-transform: uppercase;
+  text-align: center;
+  color: #159be8;
+  margin-bottom: 30px;
+}
+.partners-title{
+  @include main-font-styles(400,18px,111%,$main-font-color);
+  text-align: center;
+  margin-bottom: 66px;
+  @include max-screen(801px) {
+    @include main-font-styles(400, 20px, 111%, $main-font-color);
+  }
+  @include max-screen(361px){
+    width: 270px;
+    margin: 0 auto 70px;
+  }
+}
+.stars-block{
+  @include flex(inline-flex,inherit, inherit);
+  gap: 4px;
+  margin-bottom: 26px;
+  padding-left: 37px;
+  @include max-screen(885px){
+    padding-left: 80px;
+    margin-bottom: 80px;
+  }
+  @include max-screen(801px){
+    padding-left: 30%;
+  }
+  @include max-screen(769px){
+    padding-left: 40%;
+  }
+  @include max-screen(431px) {
+    padding-left: 36%;
+  }
+  @include max-screen(415px) {
+    padding-left: 36%;
+  }
+  @include max-screen(394px) {
+    padding-left: 34%;
+  }
+  @include max-screen(321px) {
+    padding-left: 31%;
+  }
+}
+.carousel-img{
+  margin-bottom: 80px;
+  @include max-screen(801px) {
+    margin-bottom: 40px;
+  }
+  @include max-screen(431px) {
+    margin: 0 0 40px 20px;
+  }
+}
+.owl-carousel .owl-stage {
+  @include flex(flex,inherit,center);
+  gap: 36px;
+}
+.owl-carousel .owl-nav button.owl-prev{
+  @include pseudo(inline-flex, 24px, 24px);
+  background-image: url("../img/right_circle_arrow_icon_263631.svg");
+  position: absolute;
+  left: -32px;
+  top: 50%;
+  rotate: 180deg;
+  scale: 1.5;
+  @include max-screen(431px) {
+    left: -2px;
+    scale: 1.1;
+  }
+}
+.owl-carousel .owl-nav button.owl-next{
+  background-image: url("../img/right_circle_arrow_icon_263631.svg");
+  @include pseudo(inline-flex, 24px, 24px);
+  position: absolute;
+  right: -32px;
+  top: 50%;
+  scale: 1.5;
+  @include max-screen(431px) {
+    right: 5px;
+    scale: 1.1;
+  }
+}
+.carousel-text{
+  @include main-font-styles(400,17px,176%,$main-font-color);
+  margin-bottom: 34px;
+  padding-left: 40px;
+  @include max-screen(415px){
+    @include main-font-styles(400,15px,176%,$main-font-color);
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,12px,176%,$main-font-color);
+  }
+}
+.carousel-gap{
+  @include flex(flex, inherit, inherit);
+  gap: 20px;
+}
+.customer-name{
+  @include main-font-styles(400,18px,111%,$main-font-color);
+  margin: 0 0 10px 100px;
+  @include max-screen(361px){
+    @include main-font-styles(400,15px,111%,$main-font-color);
+  }
+}
+.verified-customer{
+  @include main-font-styles(400,14px,114%,$main-font-color);
+  margin-left: 100px;
+  @include max-screen(361px){
+    @include main-font-styles(400,12px,114%,$main-font-color);
+  }
+}
+.customer-photo-1:before{
+  @include pseudo(inline-flex, 50px, 50px);
+  background-image: url("../img/Jason.svg");
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  align-items: center;
+}
+.customer-photo-2:before{
+  @include pseudo(inline-flex, 50px, 50px);
+  background-image: url("../img/Sarah.svg");
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+}
+.customer-photo-3:before{
+  @include pseudo(inline-flex, 50px, 50px);
+  background-image: url("../img/Lori.svg");
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+}
+.customer-photo-4:before{
+  @include pseudo(inline-flex, 50px, 50px);
+  background-image: url("../img/James.svg");
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+}
+.our-prices{
+  background: $secondary-color;
+}
+.our-prices .container{
+  padding: 180px 0 50px;
+  background: $secondary-color;
+  @include flex(flex,inherit,center);
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+  @include max-screen(1025px){
+  padding: 50px 15px;
+  }
+  @include max-screen(431px) {
+    padding: 50px 30px;
+  }
+}
+.our-prices-text{
+  @include main-font-styles(400,18px,111%,$hover-font-color);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 28px;
+  @include max-screen(361px){
+    @include main-font-styles(400,15px,111%,$main-font-color);
+  }
+}
+.our-prices-title {
+  @include main-font-styles(400, 40px, 135%, $main-font-color);
+  margin-bottom: 10px;
+  text-align: center;
+  max-width: 645px;
+  @include max-screen(885px) {
+    @include main-font-styles(400, 38px, 135%, $main-font-color);
+    margin-bottom: 20px;
+    max-width: 560px;
+  }
+  @include max-screen(801px) {
+    @include main-font-styles(400, 36px, 135%, $main-font-color);
+    margin-bottom: 25px;
+    max-width: 500px;
+  }
+  @include max-screen(431px) {
+    @include main-font-styles(400, 30px, 135%, $main-font-color);
+    margin-bottom: 30px;
+    max-width: 300px;
+  }
+  @include max-screen(376px){
+    max-width: 270px;
+  }
+  @include max-screen(361px){
+    @include main-font-styles(400, 25px, 135%, $main-font-color);
+  }
+}
+.our-prices-description{
+  @include main-font-styles(400,18px,167%,$main-font-color);
+  text-align: center;
+  margin-bottom: 45px;
+  max-width: 649px;
+  @include max-screen(885px) {
+    @include main-font-styles(400, 17px, 167%, $main-font-color);
+    max-width: 500px;
+  }
+  @include max-screen(431px) {
+    max-width: 300px;
+    @include main-font-styles(400, 15px, 167%, $main-font-color);
+    margin-bottom: 50px;
+  }
+  @include max-screen(376px){
+    max-width: 270px;
+  }
+  @include max-screen(361px){
+    @include main-font-styles(400, 12px, 167%, $main-font-color);
+  }
+}
+.switch{
+  @include flex(flex,inherit,center);
+  margin-bottom: 40px;
+  @include max-screen(769px){
+    margin-bottom: 80px;
+  }
+  @include max-screen(361px){
+    margin-bottom: 70px;
+    padding: 0 20px;
+  }
+  @include max-screen(321px){
+    padding: 0;
+  }
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.onoff{
+  height: 22px;
+  width: 46px;
+  padding:2px 5px;
+  border-radius: 5px;
+  position: relative;
+  transition: 2s;
+}
+.onoff-on:before{
+  @include pseudo(flex,20px,18px);
+  position: absolute;
+  bottom: 1px;
+  transform: translateX(18px);
+  background-color: $main-font-color;
+  transition: .4s;
+  border-radius: 20px;
+}
+.onoff-off:before{
+  @include pseudo(flex,20px,18px);
+  position: absolute;
+  left: 1px;
+  bottom: 1px;
+  background-color: $main-font-color;
+  transition: .4s;
+  border-radius: 20px;
+}
+.onoff-on{
+  background: $switcher-color;
+  width: 46px;
+  height: 22px;
+  cursor: pointer;
+  @include border(1px, rgba(21, 155, 232, 0.2), 20px);
+}
+.onoff-off{
+  background: $switcher-color;
+  @include border(1px, rgba(21, 155, 232, 0.2), 20px);
+  width: 46px;
+  height: 22px;
+  cursor: pointer;
+}
+.billed-monthly-text{
+  @include main-font-styles(400,16px,125%,$main-font-color);
+  margin-right: 20px;
+  @include max-screen(361px){
+    margin-right: 10px;
+    text-align: center;
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,14px,125%,$main-font-color);
+    margin-right: 20px;
+  }
+}
+.billed-monthly-text-right{
+  @include main-font-styles(400,16px,125%,$main-font-color);
+  margin-left: 20px;
+  max-width: 100px;
+  @include max-screen(361px){
+    max-width: 95px;
+    text-align: center;
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,14px,125%,$main-font-color);
+    margin-left: 20px;
+  }
+}
+.billed-monthly-text-right span{
+  @include main-font-styles(400,14px,114%,$hover-font-color);
+}
+.our-prices-options{
+  @include flex(flex, center, center);
+  gap: 50px;
+  @include max-screen(1025px){
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+.our-prices-options-title {
+  @include main-font-styles(400, 30px, 140%, $main-font-color);
+  margin-bottom: 40px;
+  @include max-screen(885px) {
+    @include main-font-styles(400, 29px, 140%, $main-font-color);
+  }
+  @include max-screen(431px) {
+    @include main-font-styles(400, 25px, 140%, $main-font-color);
+  }
+}
+.our-prices-options-value {
+  @include main-font-styles(400, 40px, 140%, $main-font-color);
+  margin-bottom: 32px;
+  @include max-screen(885px) {
+    @include main-font-styles(400, 39px, 140%, $main-font-color);
+  }
+  @include max-screen(431px) {
+    @include main-font-styles(400, 35px, 140%, $main-font-color);
+  }
+}
+.our-prices-options-description {
+  @include main-font-styles(400,16px,137%,$main-font-color);
+  margin-bottom: 31px;
+  width: 320px;
+  @include max-screen(1025px){
+    text-align: center;
+  }
+  @include max-screen(885px){
+    width: 270px;
+  }
+  @include max-screen(769px){
+    width: 255px;
+  }
+  @include max-screen(431px) {
+    width: 250px;
+  }
+}
+.our-prices-options-essentail, .our-prices-options-pro, .our-prices-options-premium{
+  @include flex(flex,inherit,center);
+  @include border(4px, transparent,5px);
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.05);
+  background: $main-color;
+  flex-direction: column;
+  padding: 73px 40px 40px;
+  transition: .5s;
+  @include max-screen(431px) {
+    padding: 40px 25px;
+  }
+}
+.our-prices-options-essentail:hover{
+  border-top: solid 4px #159be8;
+}
+.our-prices-options-pro:hover{
+  border-top: solid 4px #f95b74;
+}
+.our-prices-options-premium:hover{
+  border-top: solid 4px  #7c44e2;
+}
+.our-prices-options-premium .our-prices-options-description{
+  width: 269px;
+  margin-bottom: 50px;
+  @include max-screen(431px) {
+    width: 250px;
+  }
+}
+.start-your-free-trial{
+  @include main-font-styles(400,16px,100%,$main-font-color);
+  @include border(2px, $main-font-color, 100px);
+  padding: 16px 32px;
+  text-decoration: none;
+  transition: 1s;
+}
+.our-prices-options-essentail .start-your-free-trial:hover{
+  background: $main-font-color;
+  color: $secondary-color;
+  @include border(2px, $hover-font-color, 100px);
+}
+.our-prices-options-pro .start-your-free-trial:hover{
+  background: $main-font-color;
+  color: $secondary-color;
+  @include border(2px, #f95b74, 100px);
+}
+.our-prices-options-premium .start-your-free-trial:hover{
+  background: $main-font-color;
+  color: $secondary-color;
+  @include border(2px, #7c44e2, 100px);
+}
+.buy-cripto{
+  background: $secondary-color;
+}
+.buy-cripto .container{
+  background: $secondary-color;
+  padding-bottom: 80px;
+  @include max-screen(1025px){
+    padding: 0 30px 80px;
+  }
+  @include max-screen(431px) {
+    padding: 40px 0;
+  }
+}
+.buy-cripto-today-block{
+  position: relative;
+  background: $main-color;
+  overflow: hidden;
+  padding: 140px 0 120px;
+  @include flex(flex,inherit,center);
+  flex-direction: column;
+  @include max-screen(801px) {
+    padding: 100px 0 120px;
+  }
+  @include max-screen(321px) {
+    padding: 100px 30px;
+  }
+}
+.background-img-for-buy-cripto {
+  position: absolute;
+  top: -475px;
+  left: -104px;
+  @include max-screen(1390px){
+    left: -85px;
+  }
+  @include max-screen(1025px){
+    left: -215px;
+  }
+  @include max-screen(431px) {
+    scale: 0.8;
+    left: -50%;
+    top: -70%;
+  }
+}
+.buy-cripto-title{
+  @include main-font-styles(400,40px,135%,$main-font-color);
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  @include max-screen(801px) {
+    margin-bottom: 30px;
+  }
+  @include max-screen(431px) {
+    @include main-font-styles(400,36px,135%,$main-font-color);
+    max-width: 300px;
+  }
+  @include max-screen(361px){
+    @include main-font-styles(400,34px,135%,$main-font-color);
+    max-width: 270px;
+  }
+}
+.buy-cripto-description{
+  @include main-font-styles(400,18px,167%,$main-font-color);
+  text-align: center;
+  margin-bottom: 45px;
+  max-width: 699px;
+  position: relative;
+  z-index: 2;
+  @include max-screen(801px) {
+    max-width: 550px;
+  }
+  @include max-screen(431px) {
+    @include main-font-styles(400,15px,167%,$main-font-color);
+    max-width: 250px;
+  }
+}
+.buy-cripto-buttons-block{
+  @include flex(flex,center);
+  gap: 20px;
+  @include max-screen(361px) {
+    gap: 15px;
+  }
+}
+.buy-cripto-buttons{
+  @include main-font-styles(400,16px,100%,$main-font-color);
+  @include border(2px, #fff, 100px);
+  text-decoration: none;
+  padding: 16px 32px;
+  transition: 1s;
+  position: relative;
+  z-index: 2;
+  @include max-screen(431px){
+    padding: 16px 20px;
+  }
+  @include max-screen(361px) {
+    padding: 15px;
+  }
+  @include max-screen(321px) {
+    text-align: center;
+    padding: 10px 20px;
+    @include main-font-styles(400,13px,100%,$main-font-color);
+  }
+}
+.buy-cripto-buttons:hover{
+  @include border(2px, $hover-font-color, 100px);
+  background: $hover-font-color;
+}
+.background-img-for-buy-cripto_2{
+  position: absolute;
+  bottom: -497px;
+  right: 22px;
+  rotate: 180deg;
+  z-index: 1;
+  @include max-screen(1390px){
+    bottom: -494px;
+    right: 27px;
+  }
+  @include max-screen(1025px){
+    right: -145px;
+  }
+  @include max-screen(431px) {
+    scale: 0.8;
+    right: -50%;
+    bottom: -70%;
+  }
+}
+footer{
+  background: $main-color;
+}
+footer .container{
+  background: $main-color;
+  text-align: center;
+  padding: 60px 0 45px;
+  @include max-screen(885px){
+    padding: 90px 0 45px;
+  }
+  @include max-screen(431px){
+    padding: 75px 30px 45px;
+  }
+}
+.footer-logo{
+  margin-bottom: 20px;
+  @include max-screen(431px){
+    margin-bottom: 35px;
+  }
+  @include max-screen(376px){
+    scale: 0.9;
+  }
+}
+.footer-title{
+  @include main-font-styles(400,30px,140%,$main-font-color);
+  text-align: center;
+  margin-bottom: 20px;
+  @include max-screen(801px){
+    @include main-font-styles(400,28px,140%,$main-font-color);
+  }
+  @include max-screen(431px){
+    @include main-font-styles(400,25px,140%,$main-font-color);
+  }
+  @include max-screen(376px){
+    width: 160px;
+    margin: 0 auto 30px;
+  }
+  @include max-screen(321px){
+    @include main-font-styles(400,20px,140%,$main-font-color);
+  }
+
+}
+.social-media-links{
+  margin-right: 30px;
+  @include flex(inline-block);
+}
+footer .container a:last-of-type{
+  margin-right: 0;
+}
+.social-media-links img{
+  margin-bottom: 35px;
+  @include max-screen(801px){
+    margin-bottom: 50px;
+  }
+}
+.user-email-form{
+  @include flex(flex,inherit,center);
+  flex-direction: column;
+}
+.user-email-form label{
+  @include main-font-styles(400,24px,150%,$main-font-color);
+  text-align: center;
+  margin-bottom: 10px;
+  @include max-screen(431px){
+    @include main-font-styles(400,20px,150%,$main-font-color);
+  }
+  @include max-screen(321px) {
+    @include main-font-styles(400,15px,150%,$main-font-color);
+  }
+}
+.user-email-form input{
+  &:focus{
+    outline: none;
+     @include border(2px,$hover-font-color, 1px);
+  }
+  @include main-font-styles(400,20px,140%,$main-font-color);
+  @include border(2px, #282b53, 1px);
+  background: $secondary-color;
+  padding: 5px 10px;
+  width: 400px;
+  height: 48px;
+  margin-bottom: 52px;
+  @include max-screen(885px){
+    width: 370px;
+  }
+  @include max-screen(801px){
+    @include main-font-styles(400,18px,140%,$main-font-color);
+  }
+  @include max-screen(431px){
+    width: 300px;
+  }
+  @include max-screen(376px){
+    width: 250px;
+  }
+  @include max-screen(361px){
+    width: 230px;
+  }
+  @include max-screen(321px){
+    width: 200px;
+    height: 35px;
+  }
+}
+.user-email-form button{
+  @include main-font-styles(400,16px,100%,$main-font-color);
+  @include border(2px, $hover-font-color, 100px);
+  background: $hover-font-color;
+  text-align: center;
+  padding: 16px 32px;
+  transition: 1s;
+  margin-bottom: 68px;
+  cursor: pointer;
+  @include max-screen(431px){
+    margin-bottom: 100px;
+  }
+  @include max-screen(321px){
+    padding: 15px 20px;
+    @include main-font-styles(400,14px,100%,$main-font-color);
+  }
+}
+.user-email-form button:hover{
+  @include border(2px, $main-font-color, 100px);
+  background: $main-font-color;
+  color: $hover-font-color;
+}
+.footer-list{
+  @include flex(flex,center);
+  gap: 10px;
+  @include max-screen(431px){
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  @include max-screen(415px){
+    gap: 15px;
+  }
+  @include max-screen(394px){
+    gap: 30px;
+    @include flex(flex,center,center);
+  }
+  @include max-screen(321px) {
+    gap: 20px;
+  }
+}
+.footer-list-links{
+  @include main-font-styles(400,18px,111%,$main-font-color);
+  text-align: center;
+  text-decoration: none;
+  transition: .4s;
+  @include max-screen(361px){
+    @include main-font-styles(400,16px,111%,$main-font-color);
+  }
+}
+.footer-list-links:after{
+  @include pseudo(inline-flex,1px,15px);
+  background: $main-font-color;
+  margin-left: 10px;
+  @include max-screen(431px){
+    display: none;
+  }
+}
+.footer-list li:last-of-type a:after{
+  opacity: 0;
+}
+.footer-list li:hover .footer-list-links{
+  color: $hover-font-color;
+}
