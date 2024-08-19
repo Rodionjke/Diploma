@@ -254,59 +254,72 @@ header .container{
 .main-banner-img{
   position: absolute;
   top: -72px;
-  right: -85px;
+  right: -250px;
   z-index: 12;
+  width: 63%;
   @include max-screen(1441px){
-    width: 47%;
+    width: 61%;
     height: auto;
-    right: 1%;
+    right: -10%;
   }
   @include max-screen(1390px){
-    width: 50%;
+    width: 47%;
     height: auto;
-    right: -10px;
+    right: -52px;
   }
   @include max-screen(1025px){
-    width: 49.8%;
+    width: 58.9%;
     height: auto;
-    right: 0;
+    right: -70px;
   }
   @include max-screen(993px){
-    width: 50.5%;
+    width: 60.2%;
     height: auto;
-    right: 0;
+    right: -70px;
   }
   @include max-screen(885px){
     top: 0;
-    width: 37%;
+    width: 44.8%;
+    right: -4px;
   }
   @include max-screen(835px){
     top: 0;
-    width: 44.8%;
+    width: 53.1%;
+    right: -50px;
   }
   @include max-screen(821px){
-    width: 43.5%;
+    width: 50.7%;
+    right: -10px;
   }
   @include max-screen(801px){
-    width: 43.9%;
+    width: 51.8%;
   }
   @include max-screen(769px){
-    width: 44.9%;
+    width: 52.5%;
+    right: -10px;
   }
   @include max-screen(431px){
-    top: 104px;
+    top: 67px;
+    right: 0;
     opacity: 42%;
     width: 48%;
   }
   @include max-screen(415px){
-    width: 53%;
+    width: 62%;
     top: 20px;
+    right: -40px;
+  }
+  @include max-screen(394px){
+    top: 35px;
+    width: 63.5%;
+    right: 0;
   }
   @include max-screen(391px){
     top: 35px;
+    width: 62.5%;
   }
   @include max-screen(376px){
-    width: 54.5%;
+    width: 65.5%;
   }
 }
 .app-description-section{
@@ -608,7 +621,7 @@ header .container{
 }
 .feature-list-title:before{
   animation: pop 5s infinite linear;
-  background-image: url("../img/feature-list-img.svg");
+  background-image: url("../img/feature-list-img-web.webp");
   @include pseudo(block,20px,20px);
   position: absolute;
   right: 0;
@@ -664,7 +677,7 @@ header .container{
 }
 .feature-list-title-right:before{
   animation: pop 5s infinite linear;
-  background-image: url("../img/feature-list-img.svg");
+  background-image: url("../img/feature-list-img-web.webp");
   @include pseudo(block,20px,20px);
   position: absolute;
   left: 0;
@@ -979,6 +992,7 @@ header .container{
     padding-left: 31%;
   }
 }
+
 .carousel-img{
   margin-bottom: 80px;
   @include max-screen(801px) {
@@ -1048,7 +1062,7 @@ header .container{
 }
 .customer-photo-1:before{
   @include pseudo(inline-flex, 50px, 50px);
-  background-image: url("../img/Jason.svg");
+  background-image: url("../img/Jason-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -1056,21 +1070,21 @@ header .container{
 }
 .customer-photo-2:before{
   @include pseudo(inline-flex, 50px, 50px);
-  background-image: url("../img/Sarah.svg");
+  background-image: url("../img/Sarah-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
 }
 .customer-photo-3:before{
   @include pseudo(inline-flex, 50px, 50px);
-  background-image: url("../img/Lori.svg");
+  background-image: url("../img/Lori-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
 }
 .customer-photo-4:before{
   @include pseudo(inline-flex, 50px, 50px);
-  background-image: url("../img/James.svg");
+  background-image: url("../img/James-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;

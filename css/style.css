@@ -415,85 +415,100 @@ header .container {
 .main-banner-img {
   position: absolute;
   top: -72px;
-  right: -85px;
+  right: -250px;
   z-index: 12;
+  width: 63%;
 }
 @media screen and (max-width: 1441px) {
   .main-banner-img {
-    width: 47%;
+    width: 61%;
     height: auto;
-    right: 1%;
+    right: -10%;
   }
 }
 @media screen and (max-width: 1390px) {
   .main-banner-img {
-    width: 50%;
+    width: 47%;
     height: auto;
-    right: -10px;
+    right: -52px;
   }
 }
 @media screen and (max-width: 1025px) {
   .main-banner-img {
-    width: 49.8%;
+    width: 58.9%;
     height: auto;
-    right: 0;
+    right: -70px;
   }
 }
 @media screen and (max-width: 993px) {
   .main-banner-img {
-    width: 50.5%;
+    width: 60.2%;
     height: auto;
-    right: 0;
+    right: -70px;
   }
 }
 @media screen and (max-width: 885px) {
   .main-banner-img {
     top: 0;
-    width: 37%;
+    width: 44.8%;
+    right: -4px;
   }
 }
 @media screen and (max-width: 835px) {
   .main-banner-img {
     top: 0;
-    width: 44.8%;
+    width: 53.1%;
+    right: -50px;
   }
 }
 @media screen and (max-width: 821px) {
   .main-banner-img {
-    width: 43.5%;
+    width: 50.7%;
+    right: -10px;
   }
 }
 @media screen and (max-width: 801px) {
   .main-banner-img {
-    width: 43.9%;
+    width: 51.8%;
   }
 }
 @media screen and (max-width: 769px) {
   .main-banner-img {
-    width: 44.9%;
+    width: 52.5%;
+    right: -10px;
   }
 }
 @media screen and (max-width: 431px) {
   .main-banner-img {
-    top: 104px;
+    top: 67px;
+    right: 0;
     opacity: 42%;
     width: 48%;
   }
 }
 @media screen and (max-width: 415px) {
   .main-banner-img {
-    width: 53%;
+    width: 62%;
     top: 20px;
+    right: -40px;
+  }
+}
+@media screen and (max-width: 394px) {
+  .main-banner-img {
+    top: 35px;
+    width: 63.5%;
+    right: 0;
   }
 }
 @media screen and (max-width: 391px) {
   .main-banner-img {
     top: 35px;
+    width: 62.5%;
   }
 }
 @media screen and (max-width: 376px) {
   .main-banner-img {
-    width: 54.5%;
+    width: 65.5%;
   }
 }
 
@@ -1020,7 +1035,7 @@ header .container {
 
 .feature-list-title:before {
   animation: pop 5s infinite linear;
-  background-image: url("../img/feature-list-img.svg");
+  background-image: url("../img/feature-list-img-web.webp");
   display: block;
   width: 20px;
   height: 20px;
@@ -1128,7 +1143,7 @@ header .container {
 
 .feature-list-title-right:before {
   animation: pop 5s infinite linear;
-  background-image: url("../img/feature-list-img.svg");
+  background-image: url("../img/feature-list-img-web.webp");
   display: block;
   width: 20px;
   height: 20px;
@@ -1788,7 +1803,7 @@ header .container {
   height: 50px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/Jason.svg");
+  background-image: url("../img/Jason-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -1801,7 +1816,7 @@ header .container {
   height: 50px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/Sarah.svg");
+  background-image: url("../img/Sarah-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -1813,7 +1828,7 @@ header .container {
   height: 50px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/Lori.svg");
+  background-image: url("../img/Lori-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -1825,7 +1840,7 @@ header .container {
   height: 50px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/James.svg");
+  background-image: url("../img/James-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;

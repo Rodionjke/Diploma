@@ -1,7 +1,4 @@
 (function($) { "use strict";
-
-    //Navigation
-
     var app = function () {
         var body = undefined;
         var menu = undefined;
@@ -22,9 +19,7 @@
         };
         init();
     }();
-
 })(jQuery);
-
 $('.owl-carousel').owlCarousel({
     autoplay:true,
     autoplayTimeout: 7000,
