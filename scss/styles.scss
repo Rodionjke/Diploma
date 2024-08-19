@@ -458,14 +458,14 @@ header .container{
 }
 .learn-more-link::after {
   @include pseudo(inline-flex,20px,16px);
-  background-image: url('../img/learn-more-img_2.svg');
+  background-image: url('../images/learn-more-img_2.svg');
   margin-left: 10px;
   transform: rotate(180deg);
 }
 
 .learn-more-link:hover::after {
   @include pseudo(inline-flex,20px,16px);
-  background-image: url('../img/learn-more-img.svg');
+  background-image: url('../images/learn-more-img.svg');
   margin-left: 10px;
   transform: rotate(0deg);
 }
@@ -621,7 +621,7 @@ header .container{
 }
 .feature-list-title:before{
   animation: pop 5s infinite linear;
-  background-image: url("../img/feature-list-img-web.webp");
+  background-image: url("../images/feature-list-img-web.webp");
   @include pseudo(block,20px,20px);
   position: absolute;
   right: 0;
@@ -677,7 +677,7 @@ header .container{
 }
 .feature-list-title-right:before{
   animation: pop 5s infinite linear;
-  background-image: url("../img/feature-list-img-web.webp");
+  background-image: url("../images/feature-list-img-web.webp");
   @include pseudo(block,20px,20px);
   position: absolute;
   left: 0;
@@ -1008,7 +1008,7 @@ header .container{
 }
 .owl-carousel .owl-nav button.owl-prev{
   @include pseudo(inline-flex, 24px, 24px);
-  background-image: url("../img/right_circle_arrow_icon_263631.svg");
+  background-image: url("../images/right_circle_arrow_icon_263631.svg");
   position: absolute;
   left: -32px;
   top: 50%;
@@ -1020,7 +1020,7 @@ header .container{
   }
 }
 .owl-carousel .owl-nav button.owl-next{
-  background-image: url("../img/right_circle_arrow_icon_263631.svg");
+  background-image: url("../images/right_circle_arrow_icon_263631.svg");
   @include pseudo(inline-flex, 24px, 24px);
   position: absolute;
   right: -32px;
@@ -1062,7 +1062,7 @@ header .container{
 }
 .customer-photo-1:before{
   @include pseudo(inline-flex, 50px, 50px);
-  background-image: url("../img/Jason-web.webp");
+  background-image: url("../images/Jason-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -1070,21 +1070,21 @@ header .container{
 }
 .customer-photo-2:before{
   @include pseudo(inline-flex, 50px, 50px);
-  background-image: url("../img/Sarah-web.webp");
+  background-image: url("../images/Sarah-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
 }
 .customer-photo-3:before{
   @include pseudo(inline-flex, 50px, 50px);
-  background-image: url("../img/Lori-web.webp");
+  background-image: url("../images/Lori-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
 }
 .customer-photo-4:before{
   @include pseudo(inline-flex, 50px, 50px);
-  background-image: url("../img/James-web.webp");
+  background-image: url("../images/James-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;

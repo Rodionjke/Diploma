@@ -751,7 +751,7 @@ header .container {
   height: 16px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/learn-more-img_2.svg");
+  background-image: url("../images/learn-more-img_2.svg");
   margin-left: 10px;
   transform: rotate(180deg);
 }
@@ -762,7 +762,7 @@ header .container {
   height: 16px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/learn-more-img.svg");
+  background-image: url("../images/learn-more-img.svg");
   margin-left: 10px;
   transform: rotate(0deg);
 }
@@ -1035,7 +1035,7 @@ header .container {
 
 .feature-list-title:before {
   animation: pop 5s infinite linear;
-  background-image: url("../img/feature-list-img-web.webp");
+  background-image: url("../images/feature-list-img-web.webp");
   display: block;
   width: 20px;
   height: 20px;
@@ -1143,7 +1143,7 @@ header .container {
 
 .feature-list-title-right:before {
   animation: pop 5s infinite linear;
-  background-image: url("../img/feature-list-img-web.webp");
+  background-image: url("../images/feature-list-img-web.webp");
   display: block;
   width: 20px;
   height: 20px;
@@ -1693,7 +1693,7 @@ header .container {
   height: 24px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/right_circle_arrow_icon_263631.svg");
+  background-image: url("../images/right_circle_arrow_icon_263631.svg");
   position: absolute;
   left: -32px;
   top: 50%;
@@ -1708,7 +1708,7 @@ header .container {
 }
 
 .owl-carousel .owl-nav button.owl-next {
-  background-image: url("../img/right_circle_arrow_icon_263631.svg");
+  background-image: url("../images/right_circle_arrow_icon_263631.svg");
   display: inline-flex;
   width: 24px;
   height: 24px;
@@ -1803,7 +1803,7 @@ header .container {
   height: 50px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/Jason-web.webp");
+  background-image: url("../images/Jason-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -1816,7 +1816,7 @@ header .container {
   height: 50px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/Sarah-web.webp");
+  background-image: url("../images/Sarah-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -1828,7 +1828,7 @@ header .container {
   height: 50px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/Lori-web.webp");
+  background-image: url("../images/Lori-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -1840,7 +1840,7 @@ header .container {
   height: 50px;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../img/James-web.webp");
+  background-image: url("../images/James-web.webp");
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -2816,4 +2816,4 @@ footer .container a:last-of-type {
   color: #189ce8;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
