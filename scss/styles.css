@@ -237,11 +237,11 @@ header .container {
 }
 
 .main-banner-text {
-  width: 617px;
+  max-width: 617px;
 }
 @media screen and (max-width: 1025px) {
   .main-banner-text {
-    width: 485px;
+    max-width: 485px;
   }
 }
 @media screen and (max-width: 376px) {
@@ -251,7 +251,7 @@ header .container {
 }
 @media screen and (max-width: 321px) {
   .main-banner-text img {
-    width: 120px;
+    max-width: 120px;
     height: auto;
   }
 }
@@ -275,12 +275,12 @@ header .container {
 }
 @media screen and (max-width: 361px) {
   .main-banner-text a {
-    width: 140px;
+    max-width: 140px;
   }
 }
 @media screen and (max-width: 321px) {
   .main-banner-text a {
-    width: 120px;
+    max-width: 120px;
   }
 }
 
@@ -291,7 +291,7 @@ header .container {
   color: #fff;
   line-height: 119%;
   margin-bottom: 10px;
-  width: 557px;
+  max-width: 557px;
 }
 @media screen and (max-width: 993px) {
   .main-banner-title {
@@ -309,12 +309,12 @@ header .container {
     font-size: 55px;
     color: #fff;
     line-height: 119%;
-    width: 450px;
+    max-width: 450px;
   }
 }
 @media screen and (max-width: 835px) {
   .main-banner-title {
-    width: 400px;
+    max-width: 400px;
   }
 }
 @media screen and (max-width: 821px) {
@@ -359,18 +359,18 @@ header .container {
 }
 @media screen and (max-width: 415px) {
   .main-banner-title {
-    width: 300px;
+    max-width: 300px;
     margin: 0 auto 45px;
   }
 }
 @media screen and (max-width: 361px) {
   .main-banner-title {
-    width: 260px;
+    max-width: 260px;
   }
 }
 @media screen and (max-width: 321px) {
   .main-banner-title {
-    width: 220px;
+    max-width: 220px;
   }
 }
 
@@ -384,7 +384,7 @@ header .container {
 }
 @media screen and (max-width: 885px) {
   .main-banner-description {
-    width: 360px;
+    max-width: 360px;
   }
 }
 @media screen and (max-width: 801px) {
@@ -397,18 +397,18 @@ header .container {
     position: relative;
     z-index: 15;
     text-align: center;
-    width: 275px;
+    max-width: 275px;
     margin: 45px auto;
   }
 }
 @media screen and (max-width: 361px) {
   .main-banner-description {
-    width: 250px;
+    max-width: 250px;
   }
 }
 @media screen and (max-width: 321px) {
   .main-banner-description {
-    width: 220px;
+    max-width: 220px;
   }
 }
 
@@ -417,32 +417,32 @@ header .container {
   top: -72px;
   right: -250px;
   z-index: 12;
-  width: 63%;
+  max-width: 63%;
 }
 @media screen and (max-width: 1441px) {
   .main-banner-img {
-    width: 61%;
+    max-width: 61%;
     height: auto;
     right: -10%;
   }
 }
 @media screen and (max-width: 1390px) {
   .main-banner-img {
-    width: 47%;
+    max-width: 47%;
     height: auto;
     right: -52px;
   }
 }
 @media screen and (max-width: 1025px) {
   .main-banner-img {
-    width: 58.9%;
+    max-width: 58.9%;
     height: auto;
     right: -70px;
   }
 }
 @media screen and (max-width: 993px) {
   .main-banner-img {
-    width: 60.2%;
+    max-width: 60.2%;
     height: auto;
     right: -70px;
   }
@@ -450,31 +450,31 @@ header .container {
 @media screen and (max-width: 885px) {
   .main-banner-img {
     top: 0;
-    width: 44.8%;
+    max-width: 44.8%;
     right: -4px;
   }
 }
 @media screen and (max-width: 835px) {
   .main-banner-img {
     top: 0;
-    width: 53.1%;
+    max-width: 53.1%;
     right: -50px;
   }
 }
 @media screen and (max-width: 821px) {
   .main-banner-img {
-    width: 50.7%;
+    max-width: 50.7%;
     right: -10px;
   }
 }
 @media screen and (max-width: 801px) {
   .main-banner-img {
-    width: 51.8%;
+    max-width: 51.8%;
   }
 }
 @media screen and (max-width: 769px) {
   .main-banner-img {
-    width: 52.5%;
+    max-width: 52.5%;
     right: -10px;
   }
 }
@@ -483,12 +483,12 @@ header .container {
     top: 67px;
     right: 0;
     opacity: 42%;
-    width: 48%;
+    max-width: 48%;
   }
 }
 @media screen and (max-width: 415px) {
   .main-banner-img {
-    width: 62%;
+    max-width: 62%;
     top: 20px;
     right: -40px;
   }
@@ -496,19 +496,19 @@ header .container {
 @media screen and (max-width: 394px) {
   .main-banner-img {
     top: 35px;
-    width: 63.5%;
+    max-width: 63.5%;
     right: 0;
   }
 }
 @media screen and (max-width: 391px) {
   .main-banner-img {
     top: 35px;
-    width: 62.5%;
+    max-width: 62.5%;
   }
 }
 @media screen and (max-width: 376px) {
   .main-banner-img {
-    width: 65.5%;
+    max-width: 65.5%;
   }
 }
 
@@ -598,7 +598,7 @@ header .container {
     font-size: 30px;
     color: #fff;
     line-height: 135%;
-    width: 230px;
+    max-width: 230px;
   }
 }
 
@@ -654,7 +654,7 @@ header .container {
 }
 @media screen and (max-width: 361px) {
   .app-description-section-text {
-    width: 260px;
+    max-width: 260px;
   }
 }
 @media screen and (max-width: 321px) {
@@ -845,7 +845,7 @@ header .container {
 }
 @media screen and (max-width: 361px) {
   .feature-title {
-    width: 280px;
+    max-width: 280px;
     font-weight: 400;
     font-family: "League Spartan", sans-serif;
     font-size: 31px;
@@ -930,7 +930,7 @@ header .container {
 }
 @media screen and (max-width: 993px) {
   .background-img-for-features {
-    width: 430px;
+    max-width: 430px;
     height: auto;
     top: -380px;
   }
@@ -944,13 +944,13 @@ header .container {
 }
 @media screen and (max-width: 821px) {
   .background-img-for-features {
-    width: 365px;
+    max-width: 365px;
     left: -23%;
   }
 }
 @media screen and (max-width: 431px) {
   .background-img-for-features {
-    width: 250px;
+    max-width: 250px;
     left: -42px;
     opacity: 70%;
     top: -135px;
@@ -963,7 +963,7 @@ header .container {
 }
 @media screen and (max-width: 361px) {
   .background-img-for-features {
-    width: 220px;
+    max-width: 220px;
     left: -80px;
     top: -160px;
   }
@@ -1308,13 +1308,13 @@ header .container {
   .mobile-friendly-block {
     margin-top: 15px;
     position: relative;
-    width: 400px;
+    max-width: 400px;
     margin-right: 40px;
   }
 }
 @media screen and (max-width: 769px) {
   .mobile-friendly-block {
-    width: 370px;
+    max-width: 370px;
   }
 }
 @media screen and (max-width: 431px) {
@@ -1469,7 +1469,7 @@ header .container {
 }
 @media screen and (max-width: 1025px) {
   .mobile-friendly-img_2 {
-    width: 260px;
+    max-width: 260px;
     height: auto;
   }
 }
@@ -1529,7 +1529,7 @@ header .container {
 }
 @media screen and (max-width: 1025px) {
   .mobile-friendly-img_1 {
-    width: 260px;
+    max-width: 260px;
     height: auto;
   }
 }
@@ -1616,7 +1616,7 @@ header .container {
 }
 @media screen and (max-width: 361px) {
   .partners-title {
-    width: 270px;
+    max-width: 270px;
     margin: 0 auto 70px;
   }
 }
@@ -2212,7 +2212,7 @@ header .container {
   color: #fff;
   line-height: 137%;
   margin-bottom: 31px;
-  width: 320px;
+  max-width: 320px;
 }
 @media screen and (max-width: 1025px) {
   .our-prices-options-description {
@@ -2221,17 +2221,17 @@ header .container {
 }
 @media screen and (max-width: 885px) {
   .our-prices-options-description {
-    width: 270px;
+    max-width: 270px;
   }
 }
 @media screen and (max-width: 769px) {
   .our-prices-options-description {
-    width: 255px;
+    max-width: 255px;
   }
 }
 @media screen and (max-width: 431px) {
   .our-prices-options-description {
-    width: 250px;
+    max-width: 250px;
   }
 }
 
@@ -2266,12 +2266,12 @@ header .container {
 }
 
 .our-prices-options-premium .our-prices-options-description {
-  width: 269px;
+  max-width: 269px;
   margin-bottom: 50px;
 }
 @media screen and (max-width: 431px) {
   .our-prices-options-premium .our-prices-options-description {
-    width: 250px;
+    max-width: 250px;
   }
 }
 
@@ -2580,7 +2580,7 @@ footer .container {
 }
 @media screen and (max-width: 376px) {
   .footer-title {
-    width: 160px;
+    max-width: 160px;
     margin: 0 auto 30px;
   }
 }
@@ -2659,7 +2659,7 @@ footer .container a:last-of-type {
   border-radius: 1px;
   background: #010225;
   padding: 5px 10px;
-  width: 400px;
+  max-width: 400px;
   height: 48px;
   margin-bottom: 52px;
 }
@@ -2670,7 +2670,7 @@ footer .container a:last-of-type {
 }
 @media screen and (max-width: 885px) {
   .user-email-form input {
-    width: 370px;
+    max-width: 370px;
   }
 }
 @media screen and (max-width: 801px) {
@@ -2684,22 +2684,22 @@ footer .container a:last-of-type {
 }
 @media screen and (max-width: 431px) {
   .user-email-form input {
-    width: 300px;
+    max-width: 300px;
   }
 }
 @media screen and (max-width: 376px) {
   .user-email-form input {
-    width: 250px;
+    max-width: 250px;
   }
 }
 @media screen and (max-width: 361px) {
   .user-email-form input {
-    width: 230px;
+    max-width: 230px;
   }
 }
 @media screen and (max-width: 321px) {
   .user-email-form input {
-    width: 200px;
+    max-width: 200px;
     height: 35px;
   }
 }
